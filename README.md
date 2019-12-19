@@ -1,4 +1,4 @@
-# laravel-camelcase-json
+# laravel-json-camelcase-converter
 
 Convert response JSON key to camelCase.
 This repository is a fork of the [grohiro](https://github.com/grohiro/laravel-camelcase-json) repository.
