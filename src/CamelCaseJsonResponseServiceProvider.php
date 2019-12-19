@@ -1,5 +1,5 @@
 <?php
-namespace Grohiro\LaravelCamelCaseJson;
+namespace nrhrhysd616\LaravelJsonCamelCaseConverter;
 
 use Illuminate\Contracts\Routing\ResponseFactory;
 use Illuminate\Support\ServiceProvider;

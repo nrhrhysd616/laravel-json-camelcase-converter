@@ -1,8 +1,9 @@
 <?php
-namespace Grohiro\LaravelCamelCaseJson;
+namespace nrhrhysd616\LaravelJsonCamelCaseConverter;
 
 use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Routing\ResponseFactory as BaseResponseFactory;
+use Illuminate\Support\Str;
 
 /**
  * Convert response JSON key to camelCase
@@ -23,7 +24,7 @@ class CamelCaseJsonResponseFactory extends BaseResponseFactory
     /**
      * Encode a value to camelCase JSON
      */
-    public function encodeJson($value)
+    private function encodeJson($value)
     {
         if ($value instanceof Arrayable) {
             return $this->encodeArrayable($value);
@@ -39,7 +40,7 @@ class CamelCaseJsonResponseFactory extends BaseResponseFactory
     /**
      * Encode a arrayable
      */
-    public function encodeArrayable($arrayable)
+    private function encodeArrayable(Arrayable $arrayable)
     {
         $array = $arrayable->toArray();
         return $this->encodeJson($array);
@@ -48,11 +49,11 @@ class CamelCaseJsonResponseFactory extends BaseResponseFactory
     /**
      * Encode an array
      */
-    public function encodeArray($array)
+    private function encodeArray($array)
     {
         $newArray = [];
         foreach ($array as $key => $val) {
-            $newArray[\camel_case($key)] = $this->encodeJson($val);
+            $newArray[Str::camel($key)] = $this->encodeJson($val);
         }
         return $newArray;
     }

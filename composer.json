@@ -1,12 +1,30 @@
 {
-    "name": "grohiro/laravel-camelcase-json",
-    "version": "1.1.0",
+    "name": "nrhrhysd616/laravel-json-camelcase-converter",
+    "version": "1.2.0",
     "description": "Convert response JSON key to camelCase",
     "license": "MIT",
-    "require": {},
+    "authors": [
+        {
+            "name": "Norihiro Hayashida",
+            "homepage": "https://it.becrazy.jp/",
+            "email": "nrhrhysd616@becrazy.jp"
+        }
+    ],
+    "type": "library",
+    "require": {
+        "php": ">=7.0",
+        "laravel/framework": ">=5.5"
+    },
     "autoload": {
-      "psr-4": {
-        "Grohiro\\LaravelCamelCaseJson\\": "src/"
-      }
+        "psr-4": {
+            "nrhrhysd616\\LaravelJsonCamelCaseConverter\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "nrhrhysd616\\LaravelJsonCamelCaseConverter\\CamelCaseJsonResponseServiceProvider"
+            ]
+        }
     }
 }

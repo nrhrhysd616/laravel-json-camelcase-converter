@@ -1,10 +1,11 @@
 # laravel-camelcase-json
 
 Convert response JSON key to camelCase.
+This repository is a fork of the [grohiro](https://github.com/grohiro/laravel-camelcase-json) repository.
 
 ## Usage
 
-**In controller class**
+### In Controller class
 
 ```php
 return response()->json($model);
@@ -13,23 +14,10 @@ return response()->json($model);
 
 ## Requirements
 
-- Laravel 5+
+- Laravel 5.5+
 
-## Install 
+## Install
 
 ```bash
-$ composer require 'grohiro/laravel-camelcase-json' '~1.0'
-```
-
-Add the service provider.
-
-**config/app.php**
-
-```php
-'provider' => [
-	// default providers
-	// ...
-	
-	Grohiro\LaravelCamelCaseJson\CamelCaseJsonResponseServiceProvider::class,
-],
+$composer require 'nrhrhysd616/laravel-json-camelcase-converter'
 ```
